@@ -176,6 +176,6 @@ else if (m==7) then
         print*, tau(n),position(n),position1(n),position2(n),position3(n),position4(n),position5(n),position6(n)
     end do
 else
-    print*, "TOO MANY!"
+    print*, "ERROR: TOO MANY PARTICLES"
 end if 
 end program test
