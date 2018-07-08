@@ -23,7 +23,8 @@ do z=2,2 !Despite the fact that this do loop is redundant with just 1 "position 
 	     	end if
 	end do
 end do
+open(unit=10,file='InfiniteWalk.txt')
 do g=1,1000
-	print*, position(1,g),position(2,g)!,position(3,g),position(4,g)...position(a,g) [where a is rightmost column #]
+	write(10,*) position(1,g),position(2,g)!,position(3,g),position(4,g)...position(a,g) [where a is rightmost column #]
 end do
 end program TEST
