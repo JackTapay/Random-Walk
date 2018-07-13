@@ -1,22 +1,21 @@
 SUBROUTINE Twist(n,m,y,z,position)
 	implicit none
-    INTEGER,INTENT(INOUT)::n,m,y,z,position(2,1000)! The 2 used in the declaration can be changed in order to create n-number of walkers
-    if(m .gt. 6) then
-        m=1
+	INTEGER,INTENT(INOUT)::n,m,y,z,position(2,1000)! The 2 used in the declaration can be changed in order to create n-number of walkers
+	if(m .gt. 6) then
+        	m=1
    		y=m
-        position(z,n)=m
-    else if (m .lt. 1) then
-       	m=6
-       	y=m
+        	position(z,n)=m
+	else if (m .lt. 1) then
+       		m=6
+       		y=m
    		position(z,n)=m
   	else
-       	m=m
-       	y=m
-       	position(z,n)=m
+       		m=m
+       		y=m
+       		position(z,n)=m
    	end if     
-    RETURN
+   	RETURN
 END SUBROUTINE
-    
 program RandomWalkTwist
 implicit none
 integer :: position(2,1000),n,y,g,m,z ! The 2 used in the declaration can be changed in order to create n-number of walkers
@@ -32,10 +31,10 @@ do z=2,2 !Despite the fact that this do loop is redundant with just 1 "position 
     	call random_number(x)
        	if (x .le. 1.00/3.00) then
            	m=y+1  
-			call Twist(n,m,y,z,position)
+		call Twist(n,m,y,z,position)
        	else if ((x .gt. 1.00/3.00) .and. (x .le. 2.00/3.00)) then
        		m=y-1
-			call Twist(n,m,y,z,position)
+		call Twist(n,m,y,z,position)
       	else           	
            	m=y+0
          	call Twist(n,m,y,z,position)
