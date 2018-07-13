@@ -1,4 +1,4 @@
-program FiniteWalk
+program RandomWalkTwist
 implicit none
 integer :: position(2,1000),n,y,g,m,z ! The 2 used in the declaration can be changed in order to create n-number of walkers
 real::x,onethird,twothird
@@ -60,7 +60,8 @@ do z=2,2 !Despite the fact that this do loop is redundant with just 1 "position 
 	     	end if
 	end do
 end do
+open(unit=10,file="RandomWalk.txt")
 do g=1,1000
-        print*, position(:,g)
+        write(10,*) position(:,g)
 end do
-end program FiniteWalk
+end program RandomWalkTwist
