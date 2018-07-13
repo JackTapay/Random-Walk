@@ -1,4 +1,4 @@
-program FiniteRandomWalkWithSites
+program RandomWalkTwist2
 implicit none
 integer :: position(4,1000),n,y,g,m,z,e ! The 2 used in the declaration can be changed in order to create n-number of walkers
 real::x,onethird,twothird
@@ -135,4 +135,4 @@ do g=1,1000
         print*, position(1,g),position(2,g),position(3,g),position(4,g)!...position(a,g) [where a is rightmost column #]
 end do
 
-end program FiniteRandomWalkWithSites
+end program RandomWalkTwist2
