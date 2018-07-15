@@ -1,1 +1,62 @@
-
+prompt='What is the name of the random walk file. Include extentions.';
+x=input(prompt);
+x=load(x);
+y=size(x);
+y=y(2);
+XAxis=x(:,1);
+if y==2
+    YAxis=x(:,2);
+    plot(XAxis,YAxis)
+elseif y==3
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    plot(XAxis,YAxis,XAxis,YAxis2)    
+elseif y==4
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3)    
+elseif y==5
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    YAxis4=x(:,5);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3,XAxis,YAxis4)
+elseif y==6
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    YAxis4=x(:,5);
+    YAxis5=x(:,6);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3,XAxis,YAxis4,XAxis,YAxis5)
+elseif y==7
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    YAxis4=x(:,5);
+    YAxis5=x(:,6);
+    YAxis6=x(:,7);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3,XAxis,YAxis4,XAxis,YAxis5,XAxis,YAxis6)
+elseif y==8
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    YAxis4=x(:,5);
+    YAxis5=x(:,6);
+    YAxis6=x(:,7);
+    YAxis7=x(:,8);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3,XAxis,YAxis4,XAxis,YAxis5,XAxis,YAxis6,XAxis,YAxis7)
+elseif y==9
+    YAxis=x(:,2);
+    YAxis2=x(:,3);
+    YAxis3=x(:,4);
+    YAxis4=x(:,5);
+    YAxis5=x(:,6);
+    YAxis6=x(:,7);
+    YAxis7=x(:,8);
+    YAxis8=x(:,9);
+    plot(XAxis,YAxis,XAxis,YAxis2,XAxis,YAxis3,XAxis,YAxis4,XAxis,YAxis5,XAxis,YAxis6,XAxis,YAxis7,XAxis,YAxis8)
+end
+title('Graph of Particle Position')
+xlabel('Time')
+ylabel('Position')
