@@ -1,12 +1,12 @@
 SUBROUTINE Twist(n,m,y,z,position)
 	implicit none
 	INTEGER,INTENT(INOUT)::n,m,y,z,position(2,100)! The 2 used in the declaration can be changed in order to create n-number of walkers and you can limit the number of time units by altering the right-most index
-	if(m .gt. 6) then
-        	m=1
+	if(m .gt. 6) then !The maximum value of the random walker can be altered by changing the 6 in this if statement
+        	m=1 !This instance of 'm' must be consistent with the value in the else if statement
    		y=m
         	position(z,n)=m
-	else if (m .lt. 1) then
-       		m=6
+	else if (m .lt. 1) then !The minimum value of the random walk can be altered by changing the 1 in this else if statement
+       		m=6 !This instance of 'm' must be consisitent with the original if statement
        		y=m
    		position(z,n)=m
   	else
