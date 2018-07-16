@@ -10,7 +10,7 @@ do z=2,2 !Despite the fact that this do loop is redundant with just 1 "position 
 	y=1
 	do n=1,100 !You can limit the number of time units by altering the right-most index
         	call random_number(x)
-         	if (x .le. 1.00/3.00) then
+         	if (x .lt. 1.00/3.00) then
             		position(z,n)=y+1
              		y=position(z,n)
          	else if ((x .gt. 1.00/3.00) .and. (x .lt. 2.00/3.00)) then
