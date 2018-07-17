@@ -1,0 +1,18 @@
+prompt("What is the name of the random walk? Include extentions.")
+Random=input(prompt);
+x=load(Random);
+prompt("How many sites are there in the random walk? If there are an infinite number of sites, input 'N/A'.")
+Ns=input(prompt);
+prompt("What is the maximum number of particles that can occupy one site at the same time?")
+M=input(prompt);
+y=size(x);
+width=y(2);
+script="Occupational probability is "
+script1=" ∝ is "
+if Ns=="N/A"
+    Np=0;
+else
+    Np=(width-1)/Ns;
+end
+a=Np/M
+disp(script,Np,script1,a)
